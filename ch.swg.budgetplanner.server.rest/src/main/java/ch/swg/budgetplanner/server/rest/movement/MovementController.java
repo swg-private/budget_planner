@@ -18,7 +18,7 @@ public class MovementController {
 		this.repository = repository;
 	}
 
-    @GetMapping("/movements")
+	@GetMapping("/movements")
 	public List<Movement> movements() {
 		return repository.findAll();
 	}

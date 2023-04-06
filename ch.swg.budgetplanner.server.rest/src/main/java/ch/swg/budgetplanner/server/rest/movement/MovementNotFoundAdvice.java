@@ -6,13 +6,17 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import ch.swg.budgetplanner.server.rest.exception.ExceptionResponse;
+
 @ControllerAdvice
 public class MovementNotFoundAdvice {
     
     @ResponseBody
     @ExceptionHandler(MovementNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String movementNotFoundHandler(MovementNotFoundException ex) {
-        return ex.getMessage();
+    public ExceptionResponse movementNotFoundHandler(MovementNotFoundException ex) {
+        return ExceptionResponse.builder()
+            .message(ex.getMessage())
+            .build();
     }
 }
