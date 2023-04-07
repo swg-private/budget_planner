@@ -17,17 +17,17 @@ import lombok.NoArgsConstructor;
 @Table(name = "bp_accounts")
 public class Account {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(nullable = false)
-    private String accountNo;
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private AccountType type;
-    
-    public Account(String accountNo, AccountType type) {
-        this.accountNo = accountNo;
-        this.type = type;
-    }
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  @Column(nullable = false)
+  private String accountNo;
+  @Enumerated(EnumType.STRING)
+  @Column(nullable = false)
+  private AccountType type;
+
+  public Account(String accountNo, AccountType type) {
+    this.accountNo = accountNo;
+    this.type = type;
+  }
 }

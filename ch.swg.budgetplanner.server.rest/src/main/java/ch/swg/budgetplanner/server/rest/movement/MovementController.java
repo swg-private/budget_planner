@@ -12,18 +12,18 @@ import ch.swg.budgetplanner.server.persistence.movement.MovementRepository;
 
 @RestController
 public class MovementController {
-	
-	@Autowired
-	private MovementRepository repository;
 
-	@GetMapping("/movements")
-	public List<Movement> getMovements() {
-		return repository.findAll();
-	}
+  @Autowired
+  private MovementRepository repository;
 
-	@GetMapping("/movements/{id}")
-	public Movement getMovement(@PathVariable Long id) {
-		return repository.findById(id)
-			.orElseThrow(() -> new MovementNotFoundException(id));
-	}
+  @GetMapping("/movements")
+  public List<Movement> getMovements() {
+    return repository.findAll();
+  }
+
+  @GetMapping("/movements/{id}")
+  public Movement getMovement(@PathVariable Long id) {
+    return repository.findById(id)
+        .orElseThrow(() -> new MovementNotFoundException(id));
+  }
 }

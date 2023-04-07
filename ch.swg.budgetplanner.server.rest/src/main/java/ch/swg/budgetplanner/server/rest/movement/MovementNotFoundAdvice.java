@@ -10,13 +10,13 @@ import ch.swg.budgetplanner.server.rest.exception.ExceptionResponse;
 
 @ControllerAdvice
 public class MovementNotFoundAdvice {
-    
-    @ResponseBody
-    @ExceptionHandler(MovementNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ExceptionResponse movementNotFoundHandler(MovementNotFoundException ex) {
-        return ExceptionResponse.builder()
-            .message(ex.getMessage())
-            .build();
-    }
+
+  @ResponseBody
+  @ExceptionHandler(MovementNotFoundException.class)
+  @ResponseStatus(HttpStatus.NOT_FOUND)
+  public ExceptionResponse movementNotFoundHandler(MovementNotFoundException ex) {
+    return ExceptionResponse.builder()
+        .message(ex.getMessage())
+        .build();
+  }
 }

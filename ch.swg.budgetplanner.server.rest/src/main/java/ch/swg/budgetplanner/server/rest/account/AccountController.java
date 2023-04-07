@@ -11,12 +11,12 @@ import ch.swg.budgetplanner.server.persistence.account.AccountRepository;
 
 @RestController
 public class AccountController {
-    
-    @Autowired
-    private AccountRepository repository;
 
-    @GetMapping("/accounts")
-	public List<Account> getAccounts() {
-		return repository.findAll();
-	}
+  @Autowired
+  private AccountRepository repository;
+
+  @GetMapping("/accounts")
+  public List<Account> getAccounts() {
+    return repository.findAll();
+  }
 }

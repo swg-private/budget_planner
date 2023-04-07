@@ -17,24 +17,24 @@ import jakarta.persistence.GenerationType;
 @Table(name = "bp_movements")
 public class Movement {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String description;
-    @Column(nullable = false)
-    private Integer amount;
-    @Column(nullable = false)
-    private Boolean reoccurring;
-    @ManyToOne
-    private Account fromAccount;
-    @ManyToOne
-    private Account toAccount;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private String description;
+  @Column(nullable = false)
+  private Integer amount;
+  @Column(nullable = false)
+  private Boolean reoccurring;
+  @ManyToOne
+  private Account fromAccount;
+  @ManyToOne
+  private Account toAccount;
 
-    public Movement(String description, Integer amount, Boolean reoccurring, Account fromAccount, Account toAccount) {
-        this.description = description;
-        this.amount = amount;
-        this.reoccurring = reoccurring;
-        this.fromAccount = fromAccount;
-        this.toAccount = toAccount;
-    }
+  public Movement(String description, Integer amount, Boolean reoccurring, Account fromAccount, Account toAccount) {
+    this.description = description;
+    this.amount = amount;
+    this.reoccurring = reoccurring;
+    this.fromAccount = fromAccount;
+    this.toAccount = toAccount;
+  }
 }
