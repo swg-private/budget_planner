@@ -2,3 +2,5 @@
 .vscode/
 */target/
 HELP.md
+built
+node_modules

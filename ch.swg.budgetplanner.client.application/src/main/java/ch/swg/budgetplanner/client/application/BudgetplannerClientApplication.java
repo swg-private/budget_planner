@@ -1,12 +1,12 @@
-package ch.swg.budgetplanner;
+package ch.swg.budgetplanner.client.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BudgetplannerApplication {
+public class BudgetplannerClientApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(BudgetplannerApplication.class, args);
+    SpringApplication.run(BudgetplannerClientApplication.class, args);
   }
 }

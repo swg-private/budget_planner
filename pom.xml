@@ -13,6 +13,9 @@
         <module>ch.swg.budgetplanner.server.application</module>
         <module>ch.swg.budgetplanner.server.rest</module>
         <module>ch.swg.budgetplanner.server.persistence</module>
+        
+        <module>ch.swg.budgetplanner.client.application</module>
+        <module>ch.swg.budgetplanner.client.ui</module>
     </modules>
 
 </project>
